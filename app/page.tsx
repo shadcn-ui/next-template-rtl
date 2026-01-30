@@ -11,7 +11,7 @@ export default function Page() {
         <ModeToggle />
       </header>
       <main className="flex-1 flex items-center justify-center">
-        <div className="flex flex-col md:flex-row gap-12 items-start max-w-4xl mx-auto w-full">
+        <div className="flex flex-col md:flex-row gap-12 items-start max-w-6xl mx-auto w-full">
           <ExampleCardHebrew />
           <ExampleFormArabic />
           <LoginForm />
