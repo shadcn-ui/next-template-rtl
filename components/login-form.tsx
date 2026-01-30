@@ -27,21 +27,21 @@ export function LoginForm() {
   }
 
   return (
-    <Card className="w-full max-w-md">
+    <Card className="w-full max-w-md" dir="rtl">
       <CardHeader className="text-center">
-        <CardTitle className="text-2xl font-semibold">Welcome back</CardTitle>
+        <CardTitle className="text-2xl font-semibold">مرحباً بعودتك</CardTitle>
         <CardDescription>
-          Enter your credentials to access your account
+          أدخل بيانات الاعتماد الخاصة بك للوصول إلى حسابك
         </CardDescription>
       </CardHeader>
       <form onSubmit={handleSubmit}>
         <CardContent className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
-            <Label htmlFor="email">Email</Label>
+            <Label htmlFor="email">البريد الإلكتروني</Label>
             <Input
               id="email"
               type="email"
-              placeholder="you@example.com"
+              placeholder="example@email.com"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -50,18 +50,18 @@ export function LoginForm() {
           </div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <Label htmlFor="password">Password</Label>
+              <Label htmlFor="password">كلمة المرور</Label>
               <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Forgot password?
+                نسيت كلمة المرور؟
               </a>
             </div>
             <Input
               id="password"
               type="password"
-              placeholder="Enter your password"
+              placeholder="أدخل كلمة المرور"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -71,15 +71,15 @@ export function LoginForm() {
         </CardContent>
         <CardFooter className="flex flex-col gap-4 bg-transparent border-t-0 pt-2">
           <Button type="submit" className="w-full" disabled={isLoading}>
-            {isLoading ? "Signing in..." : "Sign in"}
+            {isLoading ? "جارٍ تسجيل الدخول..." : "تسجيل الدخول"}
           </Button>
           <p className="text-sm text-muted-foreground text-center">
-            {"Don't have an account? "}
+            {"ليس لديك حساب؟ "}
             <a
               href="#"
               className="text-foreground font-medium hover:underline"
             >
-              Sign up
+              إنشاء حساب
             </a>
           </p>
         </CardFooter>
