@@ -36,11 +36,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" className={`${geistSans.variable} ${geistMono.variable} ${notoSansArabic.variable} ${notoSansHebrew.variable} antialiased`} suppressHydrationWarning dir="rtl">
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${notoSansArabic.variable} ${notoSansHebrew.variable} antialiased`} suppressHydrationWarning dir="ltr">
       <body
 
       >
-        <DirectionProvider direction="rtl">
+        <DirectionProvider direction="ltr">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
